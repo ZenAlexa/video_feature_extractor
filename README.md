@@ -1,6 +1,6 @@
 # 视频特征提取与分析系统
 
-本项目提供了一套完整的多视角视频特征提取、分析和可视化工具，用于行为分割和识别任务。
+本项目提供了一套完整的多视角视频特征提取、分析和可视化工具，用于动作分割和识别任务。
 
 ## 功能概述
 
@@ -37,7 +37,7 @@ python video_feature_extractor.py --input_dir ./videos --output_dir ./features
 - `--fps`: 特征提取的帧率（默认：24）
 - `--resnext101_model_path`: 预训练模型路径（可选）
 
-注意：视频文件命名应遵循`{组名}_{视角名}.mov`格式，例如`Reducer_3_view1.mov`。
+注意：视频文件命名遵循`{组名}_{视角名}.mov`格式，例如`Reducer_3_view1.mov`。
 
 ### 2. 多视角特征分析
 
@@ -116,4 +116,4 @@ python view_features.py ./features/Reducer_3_fused_mean.npy --pca 3
 
 ## 下一步工作
 
-完成特征提取与融合后，可将融合特征文件（`*_fused_mean.npy`或`*_fused_max.npy`）用于后续的行为分割任务。这些融合特征结合了多视角信息，通常能够提供更好的性能。 
+完成特征提取与融合后，可将融合特征文件（`*_fused_mean.npy`或`*_fused_max.npy`）用于后续的动作分割任务。这些融合特征结合了多视角信息，通常能够提供更好的性能。 
